@@ -49,7 +49,6 @@ You might see 3 different types of spec files
 
 - https://tailwindcss.com/
 - https://www.cypress.io/
-- 
 
 
 ### Time taken
