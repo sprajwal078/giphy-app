@@ -1,46 +1,64 @@
-# Getting Started with Create React App
+# Giphy Magic
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Demo app with the following features:
+- Get a list of trending gifs
+- Search for a specific gif
 
-## Available Scripts
+[Check it out live](https://giphy-app-nu.vercel.app/)
 
-In the project directory, you can run:
 
-### `npm start`
+## How to run
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Clone this repo
+- go to the source folder (giphy-app)
+- then run `npm start`
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## How to test
+- go to the source folder (giphy-app)
+- then run `npm test`
+- for component testing or e2e testing run `npx cypress open`
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Explanations
 
-### `npm run build`
+I built this app without using any component library since the project doesn't have very complex features requirng a 3rd party library. Also this gives me a chance to show that I can build UI components easily from scratch.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Next I decided not to use routing because it only has 2 features and it doen't require complex routing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+If you follow the folder structure you can notice the following
+- the `ui-lib` folder contains all the basic UI like buttons, inputs etc.
+- the `component` folder contains all the project-specific custom components
+- hooks/data folder contains all the logic and data handling for gifs / controller
+- The `<App />` uses the `useGifsData` hook to show a list of gifs as well as forward any user interaction
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You might see 3 different types of spec files
+- the first one you can find in `/src/components/GifItem.spec.tsx`. A simple spec using react testing library
+- second one you can find in `/cypress/components/GifItem.cy.tsx`. Testing components using cypress
+- third one you can find in `/cypress/e2e/search.cy.ts`. For e2e test
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Assumptions made
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Pre study of giphy api is ok to save time
+- The app doesn't have to be perfect, as long as it offers all the features it promises
+- doesn't need to have 100% test coverage
+- Followed priority order: UI -> Features -> Code quality -> testing -> Accessibility 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### References / What I Googled
 
-## Learn More
+- https://tailwindcss.com/
+- https://www.cypress.io/
+- 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Time taken
+2 hours 40 minutes
+
+
+### Missing
+Due to time constraints there are some thing I couldn't do:
+
+- Couldn't write more tests
+- Couldn't write a better documentation
+- Couldn't focus on a11y
