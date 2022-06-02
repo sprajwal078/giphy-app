@@ -23,8 +23,8 @@ const GifsGrid: React.FC<IGifsGridProps> = ({ gifs, onNext }) => {
       }
       className="grid gap-10"
     >
-      {gifs.map(({ id, images, title }) => (
-        <GifItem key={id} title={title} {...images.downsized} />
+      {gifs.map(({ id, images, title }, idx) => (
+        <GifItem key={id + idx} title={title} {...images.downsized} />
       ))}
     </InfiniteScroll>
   );

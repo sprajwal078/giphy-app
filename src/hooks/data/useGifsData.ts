@@ -195,7 +195,7 @@ export default function useGifsData() {
     if (mode === "trending" && !gifs.length) {
       fetchNewGifs(0);
     }
-  }, [gifs.length, mode, fetchNextSetOfGifs]);
+  }, [gifs.length, mode, fetchNextSetOfGifs, fetchNewGifs]);
 
   return {
     gifs,
