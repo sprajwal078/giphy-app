@@ -23,7 +23,7 @@ Demo app with the following features:
 
 I built this app without using any component library since the project doesn't have very complex features requirng a 3rd party library. Also this gives me a chance to show that I can build UI components easily from scratch.
 
-Next I decided not to use routing because it only has 2 features and it doen't require complex routing
+Next I decided not to use routing because it only has 2 features and it doesn't require complex routing
 
 If you follow the folder structure you can notice the following
 - the `ui-lib` folder contains all the basic UI like buttons, inputs etc.
