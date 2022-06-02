@@ -21,6 +21,7 @@ const GifsGrid: React.FC<IGifsGridProps> = ({ gifs, onNext }) => {
           <b>Yay! You have seen it all</b>
         </p>
       }
+      className="grid gap-10"
     >
       {gifs.map(({ id, images, title }) => (
         <GifItem key={id} title={title} {...images.downsized} />
